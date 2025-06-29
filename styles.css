@@ -55,12 +55,11 @@ body {
 
 .header-main {
     background: rgba(10, 10, 10, 0.9);
-    padding: 20px 0;
-    position: sticky;
+    padding: 15px 0;
     top: 0;
     z-index: 100;
     font-size: 20px;
-}
+    }
 
 .header-main .container {
     display: flex;
@@ -121,6 +120,7 @@ body {
 .hero {
     height: 100vh;
     background: url('assets/logo1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
@@ -188,7 +188,10 @@ section {
 
 
 .about {
-    background: url('assets/about-bg.jpg') no-repeat center center/cover;
+    /*background: url('assets/about-bg.jpg') no-repeat center center/cover;*/
+    position: relative;     /* para o ::before funcionar corretamente */
+    height: 100vh;          /* ocupar toda a altura da viewport */
+    background-attachment: fixed; /* se quiser fixar o bg */
 }
 
 .about::before {
@@ -202,6 +205,8 @@ section {
 }
 
 .about-content {
+    height: 100%;           /* ocupar toda altura da section */
+    justify-content: center; /* opcional, para centralizar horizontalmente */
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -214,6 +219,9 @@ section {
 
 .about-text {
     flex: 1;
+    height: 500px;
+    font-size: 20px;
+    text-align: justify;
 }
 
 .about-text h2 {
@@ -226,9 +234,20 @@ section {
     line-height: 1.6;
 }
 
+.about-text,
+.about-image {
+    height: auto;       /* tira altura fixa */
+    min-height: 500px;  /* altura mínima para garantir bom tamanho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente o conteúdo */
+}
+
+/*
 .about-image {
     flex: 1;
     text-align: center;
+    height: 600px;
 }
 
 .about-image img {
@@ -236,7 +255,7 @@ section {
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
+*/
 
 /* ====== SERVICOS  ====== */
 
@@ -276,6 +295,18 @@ section {
     color: #d4af37;
 }
 
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text,
+    .about-image {
+        min-height: auto;
+        height: auto;
+    }
+}
 
 /* ====== GALERIA  ====== */
 
