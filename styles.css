@@ -165,6 +165,7 @@ body {
 
 
 /* ====== GERAL ====== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -178,6 +179,7 @@ body {
 }
 
 /* ====== HEADER TOPO ====== */
+
 .header-top {
   background-color: rgb(214, 131, 103);
   padding: 10px 0;
@@ -208,6 +210,7 @@ body {
 }
 
 /* ====== HEADER PRINCIPAL ====== */
+
 .header-main {
   background: rgba(10, 10, 10, 0.9);
   padding: 15px 0;
@@ -266,46 +269,65 @@ body {
   cursor: pointer;
 }
 
-/* ====== RESPONSIVO ====== */
+/* ====== RESPONSIVO  ====== */
+/* ====== HEADER TOP MENU DE NAVEGAÇÃO ====== */
+
 @media screen and (max-width: 768px) {
-  .header-main .container {
-    flex-direction: column;
-    align-items: flex-start;
+    .header-main .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo img {
+      max-width: 120px;
+    }
+  
+    .menu-toggle {
+      display: block;
+      font-size: 28px;
+      color: #d4af37;
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
-  .menu-toggle {
-    display: block;
-    align-self: flex-end;
-    margin-top: 10px;
-  }
-
-  .nav-menu {
-    display: none;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .btn-agendar {
-    align-self: flex-start;
-  }
-}
-
-
-
-
-
-
-
-
+  /* ====== HEADER MAIN ====== */
+  
+  @media screen and (max-width: 768px) {
+    .header-top .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 5px;
+    }
+  
+    .address a {
+      font-size: 13px;
+      line-height: 1.3;
+      word-break: break-word;
+      max-width: 90vw;
+      display: inline-block;
+    }
+  
+    .social-media {
+      font-size: 22px;
+    }
+  }  
 
 /* Hero Section */
 
