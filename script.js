@@ -1,3 +1,20 @@
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav-menu');
+
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
+
+
+
+
+
+
+
+
+
+
+
 // Efeito de rolagem suave para links do menu
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
