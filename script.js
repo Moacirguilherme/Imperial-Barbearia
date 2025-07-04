@@ -62,3 +62,21 @@ whatsappBtn.addEventListener('click', (e) => {
     e.preventDefault();
     window.open('https://wa.me/SEUNUMERO', '_blank');
 });
+
+//agendamento
+
+  function abrirEscolha() {
+    document.getElementById('escolha-barbeiro').style.display = 'block';
+  }
+
+  function redirecionarWhatsapp(barbeiro) {
+    let url = '';
+
+    if (barbeiro === 'barbeiro1') {
+      url = 'https://wa.me/5599999999999?text=Olá%20João,%20quero%20agendar%20um%20serviço!';
+    } else if (barbeiro === 'barbeiro2') {
+      url = 'https://wa.me/5588888888888?text=Olá%20Carlos,%20quero%20agendar%20um%20serviço!';
+    }
+
+    window.open(url, '_blank');
+  }
