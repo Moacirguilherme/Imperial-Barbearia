@@ -328,58 +328,7 @@ section {
 }
 */
 
-/* ====== SERVICOS  ====== */
-
-.services {
-    background: #1a1a1a;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.service-card {
-    background: #252525;
-    padding: 30px;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-}
-
-.service-card i {
-    font-size: 2.5rem;
-    color: #d4af37;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    margin-bottom: 15px;
-    color: #d4af37;
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .about-text,
-    .about-image {
-        min-height: auto;
-        height: auto;
-    }
-}
-
-/* ====== SERVICOS  NOVA SECTION ====== */
+/* ====== SERVIÇOS ====== */
 
 .servicos {
   background: #1a1a1a;
@@ -387,11 +336,19 @@ section {
   text-align: center;
 }
 
+.servicos .section-title {
+  color: #d4af37;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
 .servicos .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card-servico {
@@ -403,14 +360,16 @@ section {
   color: white;
   box-shadow: 10px 10px 0 #a9653a;
   transition: transform 0.3s;
+  text-align: center;
 }
 
 .card-servico:hover {
   transform: translateY(-5px);
 }
 
-.card-servico .icon img {
-  width: 50px;
+.card-servico i {
+  font-size: 48px; /* Tamanho igual à primeira section */
+  color: #d4af37;
   margin-bottom: 20px;
 }
 
@@ -445,10 +404,20 @@ section {
   margin-right: 8px;
   color: #c47142;
 }
+.moeda {
+  font-size: 20px;
+  color: #c47142;
+  font-weight: bold;
+  margin-right: 5px;
+}
 
+.valor {
+  font-size: 1.2rem;  
+  font-weight: bold;
+  color: #c47142;
+}
 
-
-/* ====== RESPONSIVO  ====== */
+/* ====== RESPONSIVO ====== */
 
 @media (max-width: 768px) {
   .servicos .container {
@@ -461,6 +430,7 @@ section {
     max-width: 400px;
   }
 }
+
 
 
 
