@@ -16,9 +16,14 @@ body {
 
 .header-top {
   background-color: #BA885D;
-  padding: 15px 0;
+  padding: 5px 0;
   font-size: 14px;
-}
+  }
+.header-top .address{
+  background-color: #BA885D;
+  padding: 5px 0;
+  font-size: 25px;
+  }
 
 .header-top .container {
   display: flex;
@@ -33,15 +38,16 @@ body {
   color: #fff;
   text-decoration: none;
   margin: 0 10px;
+  padding: 15px;
 }
 
 .header-top a:hover {
   color: #d4af37;
 }
 
-.social-media {
+.social-media-header-top {
   font-size: 20px;
-}
+  }
 
 
 /* ====== HEADER PRINCIPAL ====== */
@@ -119,139 +125,141 @@ body {
 /* ====== HEADER TOP MENU DE NAVEGAÇÃO ====== */
 
 @media screen and (max-width: 768px) {
-    .header-main .container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .logo img {
-      max-width: 120px;
-    }
-  
-    .menu-toggle {
-      display: block;
-      font-size: 28px;
-      color: #d4af37;
-    }
-  
-    .nav-menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-    }
-  
-    .nav-menu.active {
-      display: flex;
-    }
-  
-    .nav-menu ul {
-      flex-direction: column;
-      gap: 15px;
-    }
+  .header-main .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  /* ====== HEADER MAIN ====== */
-  
-  @media screen and (max-width: 768px) {
-    .header-main .container {
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  
-    .nav-menu {
-      display: none; /* esconde o menu completo no mobile */
-    }
-  
-    .logo {
-      display: flex;
-      align-items: center;
-    }
-  
-    .logo img {
-      max-height: 60px;
-    }
-  
-    /* se quiser que o menu apareça ao clicar (depois com JS) */
-    .nav-menu.active {
-      display: block;
-    }
+  .logo img {
+    max-width: 120px;
   }
-  
-  
-  
+
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: #d4af37;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ====== HEADER MAIN ====== */
+
+@media screen and (max-width: 768px) {
+  .header-main .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    /* esconde o menu completo no mobile */
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    max-height: 60px;
+  }
+
+  /* se quiser que o menu apareça ao clicar (depois com JS) */
+  .nav-menu.active {
+    display: block;
+  }
+}
+
+
+
 
 /* Hero Section */
 
 .hero {
-    height: 100vh;
-    background: url('assets/logo1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  height: 100vh;
+  background: url('assets/logo1.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    padding: 0 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #d4af37;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #d4af37;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 
 @media (max-width: 600px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
+  .hero h1 {
+    font-size: 2rem;
   }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
 
 
 /* ====== SECTIONS  ====== */
 
 section {
-    padding: 80px 0;
-    position: relative;
+  padding: 80px 0;
+  position: relative;
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    color: #d4af37;
-    text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-transform: uppercase;
 }
 
 
@@ -259,59 +267,67 @@ section {
 
 
 .about {
-    /*background: url('assets/about-bg.jpg') no-repeat center center/cover;*/
-    position: relative;     /* para o ::before funcionar corretamente */
-    height: 100vh;          /* ocupar toda a altura da viewport */
-    background-attachment: fixed; /* se quiser fixar o bg */
+  /*background: url('assets/about-bg.jpg') no-repeat center center/cover;*/
+  position: relative;
+  /* para o ::before funcionar corretamente */
+  height: 100vh;
+  /* ocupar toda a altura da viewport */
+  background-attachment: fixed;
+  /* se quiser fixar o bg */
 }
 
 .about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 10, 0.8);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
 }
 
 .about-content {
-    height: 100%;           /* ocupar toda altura da section */
-    justify-content: center; /* opcional, para centralizar horizontalmente */
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  height: 100%;
+  /* ocupar toda altura da section */
+  justify-content: center;
+  /* opcional, para centralizar horizontalmente */
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .about-text {
-    flex: 1;
-    height: 500px;
-    font-size: 20px;
-    text-align: justify;
+  flex: 1;
+  height: 500px;
+  font-size: 20px;
+  text-align: justify;
 }
 
 .about-text h2 {
-    color: #d4af37;
-    margin-bottom: 20px;
+  color: #d4af37;
+  margin-bottom: 20px;
 }
 
 .about-text p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 .about-text,
 .about-image {
-    height: auto;       /* tira altura fixa */
-    min-height: 500px;  /* altura mínima para garantir bom tamanho */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centraliza verticalmente o conteúdo */
+  height: auto;
+  /* tira altura fixa */
+  min-height: 500px;
+  /* altura mínima para garantir bom tamanho */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* centraliza verticalmente o conteúdo */
 }
 
 /*
@@ -331,10 +347,14 @@ section {
 /* ====== SERVIÇOS ====== */
 
 .servicos {
-  background: #1a1a1a;
+  position: relative;      
+  min-height: 100vh;       
   padding: 60px 20px;
   text-align: center;
+  background: rgba(10, 10, 10, 0.8);
+  
 }
+
 
 .servicos .section-title {
   color: #d4af37;
@@ -368,7 +388,8 @@ section {
 }
 
 .card-servico i {
-  font-size: 48px; /* Tamanho igual à primeira section */
+  font-size: 48px;
+  /* Tamanho igual à primeira section */
   color: #d4af37;
   margin-bottom: 20px;
 }
@@ -404,6 +425,7 @@ section {
   margin-right: 8px;
   color: #c47142;
 }
+
 .moeda {
   font-size: 20px;
   color: #c47142;
@@ -412,7 +434,7 @@ section {
 }
 
 .valor {
-  font-size: 1.2rem;  
+  font-size: 1.2rem;
   font-weight: bold;
   color: #c47142;
 }
@@ -437,46 +459,50 @@ section {
 /* ====== GALERIA  ====== */
 
 .gallery {
-    background: url('assets/gallery-bg.jpg') no-repeat center center/cover;
-}
+    position: relative;      
+    min-height: 100vh;       
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(10, 10, 10, 0.8);
+    }
 
 .gallery::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(10, 10, 10, 0.8);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-item {
-    height: 250px;
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
@@ -487,6 +513,7 @@ section {
   background-color: #1a1a1a;
   text-align: center;
 }
+
 .contato-barbeiros h1 {
   color: #d4a23a;
   font-size: 2rem;
@@ -522,6 +549,7 @@ section {
 .barbeiro h3 {
   color: #fff;
   margin: 15px 0;
+  margin-bottom: 10px;
 }
 
 .btn-whatsapp {
@@ -539,6 +567,20 @@ section {
   background-color: #b88b2f;
 }
 
+/* ===== ANIMAÇÃO DE ENTRADA ===== */
+
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.scroll-effect.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* ====== RESPONSIVO  ====== */
 
 @media (max-width: 600px) {
@@ -552,141 +594,187 @@ section {
   }
 }
 
-/* ====== FOOTER  ====== */
+/* ====== FOOTER ====== */
 
 footer {
-    background: #0a0a0a;
-    padding: 30px 0;
-    text-align: center;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  padding: 50px 20px 30px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.social-links {
-    margin-bottom: 20px;
+/* Logo */
+
+.logo-container {
+  margin-bottom: 25px;
 }
 
-.social-links a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: color 0.3s;
+.logo-container img {
+  max-width: 150px;
+  height: auto;
+  width: 150px;   /* largura fixa */
+  height: 150px;  /* altura fixa igual à largura */
+  border-radius: 50%;
+  object-fit: cover; /* garante que a imagem preencha o círculo sem distorcer */
+  display: block;    /* remove espaçamento em linha */
+  margin: 0 auto;    /* opcional, centralizar */
 }
 
-.social-links a:hover {
-    color: #d4af37;
+
+/* Contato */
+
+.contact-info {
+  margin-bottom: 20px;
 }
 
+.address a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.address a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Redes sociais */
+.social-media {
+  margin: 30px 0;
+}
+
+.social-media h2 {
+  font-size: 16px;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d4af37;
+  transform: translateY(-3px);
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #555, transparent);
+  margin: 30px auto;
+  width: 80%;
+  border: none;
+}
+
+/* Textos */
 .copyright {
-    font-size: 14px;
-    color: #777;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+  margin-top: 10px;
 }
 
-/* Efeitos de Rolagem */
-.scroll-effect {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+.developer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #aaa;
 }
 
-.scroll-effect.active {
-    opacity: 1;
-    transform: translateY(0);
+.developer a {
+  color: #d4af37;
+  text-decoration: none;
 }
 
-
-/* ====== RESPONSIVO  ====== */
-
-@media (max-width: 768px) {
-    .header-top .container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .header-main .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .nav-menu li {
-        margin-left: 0;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
+.developer a:hover {
+  text-decoration: underline;
 }
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 600px) {
+  .social-icons {
+    gap: 15px;
+  }
+
+  .address a {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+}
+
 
 
 /* ==== BOTÃO FIXO DO WHATSAPP ==== */
 
 .whatsapp-fixo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    font-size: 40px;
-    padding: 15px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-  }
-  
-  .whatsapp-fixo img {
-    width: 32px;
-    height: 32px;
-    display: block;
-  }
-  
-  .whatsapp-fixo:hover {
-    transform: scale(1.1);
-    background-color: #20ba5a;
-  }
-  
-  /* Animação de entrada: botão "sobe" suavemente ao aparecer */
-  
-  @keyframes subir-whats {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Aplicando a animação ao botão */
-  .whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 40px;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-fixo img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
+}
+
+/* Animação de entrada: botão "sobe" suavemente ao aparecer */
+
+@keyframes subir-whats {
+  from {
     opacity: 0;
-    animation: subir-whats 0.7s ease-out forwards;
-    animation-delay: 1.0s;
+    transform: translateY(30px);
   }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicando a animação ao botão */
+.whatsapp-fixo {
+  opacity: 0;
+  animation: subir-whats 0.7s ease-out forwards;
+  animation-delay: 1.0s;
+}

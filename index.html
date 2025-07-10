@@ -14,21 +14,22 @@
 <body>
 
   <!-- HEADER TOP MENU DE NAVEGAÇÃO -->
-  <div class="header-top">
-    <div class="container">
-      <div class="address">
-        <a href="https://maps.app.goo.gl/Drz8Aog6NRt2tNri6">
-          <i class="fas fa-map-marker-alt"></i> Rua Prof. Amazília, 1353 - São Bernardo União da Vitória
-        </a>
-      </div>
-      <div class="social-media">
-        <a href="https://www.instagram.com/imperial_barber.uv/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.instagram.com/imperial_barber.uv/"><i class="fab fa-facebook-f"></i></a>
-        <a href="#contato"><i class="fab fa-whatsapp"></i></a>
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <div class="address">
+          <a href="https://maps.app.goo.gl/Drz8Aog6NRt2tNri6">
+            <i class="fas fa-map-marker-alt"></i> Rua Prof. Amazília, 1353 - São Bernardo União da Vitória
+          </a>
+        </div>
+        <div class="social-media-header-top">
+          <a href="https://www.instagram.com/imperial_barber.uv/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/imperial_barber.uv/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#contato"><i class="fab fa-whatsapp"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-
+  </header>
   <!-- HEADER MAIN LOGO + MENU -->
 
   <header class="header-main">
@@ -46,7 +47,7 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#about">Quem Somos</a></li>
-          <li><a href="#services">Nossos Serviços</a></li>
+          <li><a href="#servicos">Nossos Serviços</a></li>
           <li><a href="#gallery">Galeria</a></li>
           <li><a href="#contato">Contato</a></li>
           <li><a href="#contato" class="btn-agendar">Agende Seu Horário</a></li>
@@ -83,7 +84,7 @@
 
   <!-- SERVIÇOS -->
 
-  <section class="servicos">
+  <section id="servicos" class="servicos">
     <h2 class="section-title scroll-effect">Nossos Serviços</h2>
     <div class="container">
 
@@ -144,13 +145,6 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
   <!-- GALERIA -->
 
   <section id="gallery" class="gallery">
@@ -178,13 +172,13 @@
     <h1>CONTATO</h1>
     <h2>Agende com um de nossos barbeiros</h2>
     <div class="barbeiros-container">
-      <div class="barbeiro">
+      <div class="barbeiro scroll-effect">
         <img src="assets/barber1.jpg" alt="Barbeiro Lucas">
         <h3>Lucas Ranquel</h3>
         <a class="btn-whatsapp" href="https://wa.me/5542984182669" target="_blank">Agendar com Lucas</a>
       </div>
 
-      <div class="barbeiro">
+      <div class="barbeiro scroll-effect">
         <img src="assets/barber2.jpg" alt="Barbeiro Carlos">
         <h3>Denis Poerner</h3>
         <a class="btn-whatsapp" href="https://wa.me/5542988683358" target="_blank">Agendar com Denis</a>
@@ -193,28 +187,64 @@
     </div>
   </section>
 
-
-
   <!-- FOOTER -->
+
 
   <footer>
     <div class="footer-content">
-      <div class="social-links">
-        <a href="https://www.instagram.com/imperial_barber.uv"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/imperial_barber.uv"><i class="fab fa-instagram"></i></a>
-        <a href="#contato"><i class="fab fa-whatsapp"></i></a>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <img src="assets/logo2.JPG" alt="Logo da Empresa">
       </div>
-      <p class="copyright">&copy; 2023 Barbearia Estilo Clássico. Todos os direitos reservados.</p>
+
+      <!-- Endereço -->
+      <div class="contact-info">
+        <p class="address">
+          <a href="https://maps.app.goo.gl/Drz8Aog6NRt2tNri6">
+            <i class="fas fa-map-marker-alt"></i> Rua Prof. Amazília, 1353 - São Bernardo, União da Vitória
+          </a>
+        </p>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="social-media">
+        <h2>Siga-nos!</h2>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/imperial_barber.uv/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/imperial_barber.uv/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </i></a>
+        </div>
+      </div>
+
+      <!-- Direitos autorais -->
+      <div class="copyright">
+        <p>Imperial Barbearia®</p>
+        <p>CNPJ: 60.841.767/0001-75</p>
+        <p>©2025 Todos os direitos reservados.</p>
+      </div>
+
+      <!-- Divisor -->
+      <hr class="divider">
+
+      <!-- Desenvolvedor -->
+      <div class="developer">
+        <p>Desenvolvido por Moacir Guilherme Tabisz</p><br>
+        <div class="social-icons">
+          <a href="https://wa.me/5542988694890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/moacirtabisz/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/moacir.guilherme.3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+
     </div>
   </footer>
-
 
   <!-- WHATSAPP FIXO -->
 
   <a href="#contato" class="whatsapp-fixo" target="_blank" rel="noopener noreferrer" aria-label="Fale no WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-
 
   <!-- JavaScript -->
   <script src="script.js"></script>
