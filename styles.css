@@ -459,6 +459,9 @@ section {
   font-weight: bold;
   color: #c47142;
 }
+.icone-servico {
+width: 40%;
+}
 
 /* ====== RESPONSIVO ====== */
 
@@ -492,8 +495,8 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 10, 10, 0.8);
-}
+  z-index: 1;
+  }
 
 .gallery-grid {
   display: grid;
@@ -501,17 +504,17 @@ section {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  
   position: relative;
   z-index: 1;
 }
-
+/*
 .gallery-item {
   height: 250px;
   overflow: hidden;
   border-radius: 5px;
   position: relative;
-}
+}*/
 
 .gallery-item img {
   width: 100%;
@@ -523,6 +526,108 @@ section {
 .gallery-item:hover img {
   transform: scale(1.1);
 }
+
+
+/* ====== CARROSSEL ====== */
+
+.carrossel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item {
+  min-width: 100%;
+  height: 600px; /* Ajuste conforme necessário */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.gallery-item img {
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrossel-prev, .carrossel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carrossel-prev { left: 20px; }
+.carrossel-next { right: 20px; }
+
+.carrossel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carrossel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carrossel-indicator.active {
+  background: white;
+}
+
+.carrossel-item {
+  height: 60vh;
+  max-height: 600px;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .carrossel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carrossel-item {
+    height: auto;
+  }
+
+  .carrossel-prev,
+  .carrossel-next {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid-item {
+    height: 200px;
+  }
+}
+
+
 
 
 /* ====== CONTATO  ====== */
