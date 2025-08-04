@@ -664,13 +664,18 @@ width: 40%;
   max-width: 250px;
 }
 
+
+
 .barbeiro img {
   width: 100%;
-  height: 300px;
+  height: auto;
   border-radius: 8px;
-    
-}
+  }
 
+  .barbeiro img.barbeiro3 {
+    height: 293px;
+    object-fit: cover;
+  }
 .barbeiro h3 {
   color: #fff;
   margin: 15px 0;
